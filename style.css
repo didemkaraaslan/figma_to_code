@@ -1,3 +1,167 @@
+@import '_reset.css';
+
+:root {
+  --dark-gray: #1f1534;
+  --gray: #7d7987;
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #458ff6;
+}
 body {
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
+}
+
+section {
+  margin: 70px 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 1600px;
+  margin: 0 auto;
+  padding: 56px 180px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 160px;
+  height: 40px;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items li a {
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--dark-gray);
+  opacity: 0.5;
+  margin: 0 20px;
+}
+
+.nav-items li a.active {
+  font-weight: bold;
+  opacity: 1;
+}
+
+.element {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  width: 132px;
+  height: 115px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 84px;
+}
+
+.hero-container .left {
+  flex: 1;
+  margin-right: 110px;
+}
+
+.hero-container .left h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  color: var(--black);
+  margin-bottom: 25px;
+  width: 430px;
+}
+
+.hero-container .left p {
+  width: 449px;
+  color: var(--gray);
+  margin-bottom: 45px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 60px;
+  background: var(--blue);
+  border-radius: 55px;
+  color: var(--white);
+  padding: 15px 40px;
+}
+
+/*  OUR SERVICES  */
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services .heading {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 56px;
+  color: var(--black);
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.services .heading::after {
+  content: '';
+  width: 56px;
+  height: 2px;
+  background: var(--black);
+  border-radius: 5px;
+
+  position: absolute;
+  top: 66px;
+  left: 85px;
+}
+
+.services .subheading {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.service-cards {
+}
+
+.service-card {
+  width: 350px;
+  height: 354px;
+  background: var(--white);
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.service-card h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 56px;
+  color: var(--black);
+}
+
+.service-card p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--gray);
 }
