@@ -238,8 +238,7 @@ ul {
 
 .footer-bg {
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
-  padding: 118px 190px;
-  height: 532px;
+  padding: 100px 80px;
 }
 .footer {
   display: flex;
@@ -293,4 +292,81 @@ ul {
   font-weight: 300;
   font-size: 18px;
   line-height: 38px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1630px) {
+  .wrapper {
+    text-align: center;
+    padding: 6px 50px;
+
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 1420px) {
+  .wrapper {
+    text-align: center;
+    padding: 6px 10px;
+
+    max-width: 75%;
+  }
+
+  .healthcare {
+    flex-direction: column;
+  }
+
+  .healthcare .left {
+    margin-bottom: 200px;
+    margin-right: 0;
+  }
+
+  .service-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 37px 34px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer .footer_left {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .header {
+    flex-direction: column;
+  }
+  .logo {
+    margin-bottom: 100px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-container .left {
+    margin-bottom: 100px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 930px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  .service-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    width: 100%;
+  }
 }
