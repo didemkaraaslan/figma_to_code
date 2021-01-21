@@ -1,4 +1,4 @@
-@import '_reset.css';
+@import "_reset.css";
 
 :root {
   --dark-gray: #1f1534;
@@ -8,15 +8,20 @@
   --blue: #458ff6;
 }
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
+  height: 100vh;
 }
 
 section {
-  margin: 70px 0px;
+  margin: 100px 0px;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .wrapper {
@@ -94,11 +99,13 @@ a {
 .btn {
   font-weight: bold;
   font-size: 18px;
-  line-height: 60px;
-  background: var(--blue);
   border-radius: 55px;
-  color: var(--white);
   padding: 15px 40px;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
 }
 
 /*  OUR SERVICES  */
@@ -108,9 +115,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-.services .heading {
+.heading {
   font-weight: bold;
   font-size: 36px;
   line-height: 56px;
@@ -119,8 +127,8 @@ a {
   margin-bottom: 60px;
 }
 
-.services .heading::after {
-  content: '';
+.heading::after {
+  content: "";
   width: 56px;
   height: 2px;
   background: var(--black);
@@ -131,7 +139,7 @@ a {
   left: 85px;
 }
 
-.services .subheading {
+.subheading {
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
@@ -141,6 +149,10 @@ a {
 }
 
 .service-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 37px 34px;
+  margin-bottom: 70px;
 }
 
 .service-card {
@@ -152,11 +164,16 @@ a {
   padding: 40px;
 }
 
+.service-card img {
+  margin-bottom: 23px;
+}
+
 .service-card h3 {
   font-weight: bold;
   font-size: 24px;
   line-height: 56px;
   color: var(--black);
+  margin-bottom: 3px;
 }
 
 .service-card p {
@@ -164,4 +181,116 @@ a {
   font-size: 16px;
   line-height: 28px;
   color: var(--gray);
+}
+
+.blob {
+  position: absolute;
+  left: -294px;
+  bottom: 332px;
+  z-index: -3;
+}
+
+.dots {
+  position: absolute;
+  right: 20px;
+  top: 550px;
+  z-index: -3;
+}
+
+.btn-outline-primary {
+  border: 1.4px solid var(--blue);
+  color: var(--blue);
+}
+
+/* Leading Healthcare Providers  */
+
+.healthcare {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.healthcare .left {
+  flex: 1;
+  margin-right: 137px;
+  width: 650px;
+  height: 477px;
+}
+.healthcare .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 450px;
+}
+
+.healthcare .right .subheading {
+  text-align: left;
+  margin-bottom: 38px;
+}
+
+.healthcare .heading::after {
+  top: 126px;
+  left: 0px;
+}
+
+/* FOOTER */
+
+.footer-bg {
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  padding: 118px 190px;
+  height: 532px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_left {
+  margin-right: 145px;
+  width: 390px;
+}
+
+.footer_left img {
+  margin-bottom: 17px;
+}
+
+.footer_left h5 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 31px;
+  color: var(--white);
+}
+.footer_left p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--white);
+}
+
+.footer_right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  margin: 0 55px;
+}
+
+.footer-nav h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 60px;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.footer-nav ul li a {
+  color: var(--white);
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 38px;
 }
